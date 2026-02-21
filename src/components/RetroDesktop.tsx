@@ -30,7 +30,7 @@ const BANGUELA_PHOTOS: GalleryPhoto[] = [
 
 const NAUTICO_PHOTOS: GalleryPhoto[] = [
   { src: assetUrl('/photos/lixeira/nautico/01.png'), alt: 'Náutico' },
-  { src: assetUrl('/photos/lixeira/nautico/02.jpg'), alt: 'Náutico' },
+  { src: assetUrl('/photos/lixeira/nautico/02.jpeg'), alt: 'Náutico' },
   { src: assetUrl('/photos/lixeira/nautico/03.jpeg'), alt: 'Náutico' },
 ];
 
