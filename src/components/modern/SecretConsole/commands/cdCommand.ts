@@ -21,13 +21,13 @@ export function handleCdCommand(cmd: string, ctx: CommandContext): boolean {
 
   if (cmd === "cd luiza") {
     addLine('<span style="color:#3794CF">Abrindo luiza/...</span>');
-    window.open("/convite-luiza/luiza", "_blank");
+    window.open("/luiza", "_blank");
     return true;
   }
 
   if (cmd === "cd meninas") {
     addLine('<span style="color:#3794CF">Abrindo meninas/...</span>');
-    window.open("/convite-luiza/meninas", "_blank");
+    window.open("/meninas", "_blank");
     return true;
   }
 
