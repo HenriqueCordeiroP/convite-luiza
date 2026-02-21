@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Paleta: azuis (#A6CEE8, #7BB1D9, #3794CF, #077BC6, #0668BC) + lilases (#CBBACE, #CB8CC2) */
+    --background: 208 40% 6%;
+    --foreground: 210 40% 98%;
+    --card: 208 35% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 208 35% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 204 93% 40%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 208 35% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 208 35% 16%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 312 35% 67%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 208 25% 18%;
+    --input: 208 25% 18%;
+    --ring: 204 93% 40%;
+    --sidebar-background: 208 40% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 204 93% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 208 30% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 208 25% 18%;
+    --sidebar-ring: 204 93% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply cursor-default;
+     /* Evita que o texto seja selecionado */
+  }
+}
+
+/* Glitch animation */
+@keyframes glitch-1 {
+  0%, 100% { clip-path: inset(0 0 95% 0); transform: translate(0); }
+  10% { clip-path: inset(20% 0 60% 0); transform: translate(-5px, 2px); }
+  20% { clip-path: inset(50% 0 20% 0); transform: translate(5px, -2px); }
+  30% { clip-path: inset(10% 0 70% 0); transform: translate(-3px, 1px); }
+  40% { clip-path: inset(60% 0 10% 0); transform: translate(3px, -1px); }
+  50% { clip-path: inset(30% 0 40% 0); transform: translate(-2px, 3px); }
+  60% { clip-path: inset(70% 0 5% 0); transform: translate(2px, -3px); }
+  70% { clip-path: inset(5% 0 80% 0); transform: translate(-4px, 2px); }
+  80% { clip-path: inset(40% 0 30% 0); transform: translate(4px, -2px); }
+  90% { clip-path: inset(80% 0 0% 0); transform: translate(-1px, 1px); }
+}
+
+@keyframes scanline {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  75% { opacity: 0.95; }
+}
+
+/* Modern font */
+.font-modern {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Softer font for timeline */
+.font-timeline {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-pixel {
+  font-family: 'VT323', monospace;
+}
+
+/* Glassmorphism */
+.glass {
+  background: hsla(230, 25%, 15%, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+/* Confetti keyframe */
+@keyframes confetti-fall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.animate-confetti-fall {
+  animation: confetti-fall 3s linear forwards;
+}
+
+/* Marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 20s linear infinite;
+}
+
+/* Modern section: evita sombra branca no topo no celular */
+@media (max-width: 640px) {
+  .hero-title-glow {
+    text-shadow: 0 0 4px rgba(255,255,255,0.12), 0 0 16px rgba(55,148,207,0.15) !important;
+  }
+}
+
+/* Slow spin (bubble borders) */
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
