@@ -14,20 +14,20 @@ export function handleCdCommand(cmd: string, ctx: CommandContext): boolean {
         '  <span style="color:#A6CEE8">cd retro</span>   — Volta ao visual retrô',
         "",
         '<span style="opacity:0.4;font-style:italic">// Use "ls" para ver os diretórios disponíveis</span>',
-      ].join("<br/>")
+      ].join("<br/>"),
     );
     return true;
   }
 
   if (cmd === "cd luiza") {
     addLine('<span style="color:#3794CF">Abrindo luiza/...</span>');
-    window.open("/luiza", "_blank");
+    window.open("/convite-luiza/luiza", "_blank");
     return true;
   }
 
   if (cmd === "cd meninas") {
     addLine('<span style="color:#3794CF">Abrindo meninas/...</span>');
-    window.open("/meninas", "_blank");
+    window.open("/convite-luiza/meninas", "_blank");
     return true;
   }
 
@@ -40,7 +40,7 @@ export function handleCdCommand(cmd: string, ctx: CommandContext): boolean {
   if (cmd.startsWith("cd ")) {
     const dir = cmd.slice(3).trim();
     addLine(
-      `<span style="color:#0668BC">cd:</span> ${escapeHtml(dir)}: diretório não encontrado`
+      `<span style="color:#0668BC">cd:</span> ${escapeHtml(dir)}: diretório não encontrado`,
     );
     return true;
   }

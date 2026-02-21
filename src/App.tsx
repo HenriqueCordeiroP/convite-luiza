@@ -19,12 +19,9 @@ const App = () => (
       <BrowserRouter basename="/convite-luiza">
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/convite-luiza/luiza" element={<LuizaGallery />} />
-          <Route path="/convite-luiza/meninas" element={<MeninasGallery />} />
-          <Route
-            path="/convite-luiza/lista-convidados"
-            element={<ListaConvidados />}
-          />
+          <Route path="/luiza" element={<LuizaGallery />} />
+          <Route path="/meninas" element={<MeninasGallery />} />
+          <Route path="/lista-convidados" element={<ListaConvidados />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
