@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { THEME } from '@/components/shared/constants';
+import { assetUrl } from '@/lib/utils';
 
 export interface GalleryPhoto {
   src: string;
@@ -125,7 +126,7 @@ export function RetroGalleryModal({
                   onError={(e) => {
                     const el = e.currentTarget;
                     el.style.objectFit = 'none';
-                    el.src = '/placeholder.svg';
+                    el.src = assetUrl('/placeholder.svg');
                   }}
                 />
                 <span

@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { assetUrl } from "@/lib/utils";
 
-const BALLOON_SRC = "/assets/22_balloon.png";
-const MUSIC_SRC = "/assets/aba_music.png";
-const AUDIO_SRC = "/audio/jb-beauty.mp3";
-const CUPCAKE_SRC = "/assets/cupcake.png";
-const LETRINHAS_SRC = "/assets/letrinhas.png";
-const CONFIRME_SRC = "/assets/aba_confirme.png";
-const EXPORTANDO_SRC = "/assets/exportando.png";
-const DIPLOMA_SRC = "/assets/diploma.png";
+const BALLOON_SRC = assetUrl("/assets/22_balloon.png");
+const MUSIC_SRC = assetUrl("/assets/aba_music.png");
+const AUDIO_SRC = assetUrl("/audio/jb-beauty.mp3");
+const CUPCAKE_SRC = assetUrl("/assets/cupcake.png");
+const LETRINHAS_SRC = assetUrl("/assets/letrinhas.png");
+const CONFIRME_SRC = assetUrl("/assets/aba_confirme.png");
+const EXPORTANDO_SRC = assetUrl("/assets/exportando.png");
+const DIPLOMA_SRC = assetUrl("/assets/diploma.png");
 const START_AT_SECONDS = 50;
 
 export function Hero() {
@@ -164,7 +165,7 @@ export function Hero() {
       >
         <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6">
           <motion.img
-            src="/assets/chapeu_festa.png"
+            src={assetUrl("/assets/chapeu_festa.png")}
             alt="Chapéu de festa"
             animate={{ y: [0, -8, 0] }}
             transition={{
@@ -176,7 +177,7 @@ export function Hero() {
           />
 
           <motion.img
-            src="/assets/chapeu_formatura.png"
+            src={assetUrl("/assets/chapeu_formatura.png")}
             alt="Chapéu de formatura"
             animate={{ y: [0, -8, 0] }}
             transition={{
@@ -207,7 +208,7 @@ export function Hero() {
 
         <div className="mt-6 flex justify-center">
           <motion.img
-            src="/assets/info_festa.png"
+            src={assetUrl("/assets/info_festa.png")}
             alt="14 de março de 2026, início às 16h. Rua Antônio Virtruvio, 49. Formatura + Aniversário."
             className="max-w-[340px] sm:max-w-[500px] w-full h-auto object-contain drop-shadow-lg ml-2 sm:ml-4 hover:drop-shadow-[0_0_20px_rgba(55,148,207,0.4)] transition-all duration-300 hover:scale-[1.02]"
           />

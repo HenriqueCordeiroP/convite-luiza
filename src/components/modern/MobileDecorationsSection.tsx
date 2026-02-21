@@ -1,8 +1,9 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
+import { assetUrl } from "@/lib/utils";
 
-const MUSIC_SRC = "/assets/aba_music.png";
-const AUDIO_SRC = "/audio/jb-beauty.mp3";
+const MUSIC_SRC = assetUrl("/assets/aba_music.png");
+const AUDIO_SRC = assetUrl("/audio/jb-beauty.mp3");
 const START_AT_SECONDS = 50;
 
 type MobileDecorIcon = {
@@ -18,13 +19,13 @@ type MobileDecorIcon = {
 /** Mobile: 3 itens por separação (diagonal leve, organizado) */
 const TOP_DECOR: readonly MobileDecorIcon[] = [
   {
-    src: "/assets/22_balloon.png",
+    src: assetUrl("/assets/22_balloon.png"),
     size: "w-12",
     rot: "rotate-6",
     pos: "col-start-1 justify-self-start -translate-y-4",
   },
   {
-    src: "/assets/cupcake.png",
+    src: assetUrl("/assets/cupcake.png"),
     size: "w-12",
     rot: "-rotate-12",
     pos: "col-start-3 justify-self-end translate-y-4",
@@ -33,19 +34,19 @@ const TOP_DECOR: readonly MobileDecorIcon[] = [
 
 const BOTTOM_DECOR: readonly MobileDecorIcon[] = [
   {
-    src: "/assets/disco.png",
+    src: assetUrl("/assets/disco.png"),
     size: "w-16",
     rot: "rotate-12",
     pos: "col-start-1 justify-self-start -translate-y-4",
   },
   {
-    src: "/assets/exportando.png",
+    src: assetUrl("/assets/exportando.png"),
     size: "w-56",
     rot: "-rotate-6",
     pos: "col-start-2 justify-self-center translate-y-0 max-w-none",
   },
   {
-    src: "/assets/diploma.png",
+    src: assetUrl("/assets/diploma.png"),
     size: "w-16",
     rot: "-rotate-[65deg]",
     pos: "col-start-3 justify-self-end translate-y-4",
@@ -75,13 +76,13 @@ export function MobileDecorationsSection({ placement }: MobileDecorationsSection
       : placement === "middle"
         ? ([
             {
-              src: "/assets/letrinhas.png",
+              src: assetUrl("/assets/letrinhas.png"),
               size: "w-40",
               rot: "-rotate-12",
               pos: "col-start-1 justify-self-center -translate-y-3 -translate-x-4 max-w-none",
             },
             {
-              src: "/assets/aba_confirme.png",
+              src: assetUrl("/assets/aba_confirme.png"),
               size: "w-44",
               rot: "rotate-10",
               pos: "col-start-2 justify-self-center translate-y-3 translate-x-4 max-w-none",

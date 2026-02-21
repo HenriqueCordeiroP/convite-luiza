@@ -1,5 +1,6 @@
 // Shared constants used across multiple components
 // Paleta: azuis (#A6CEE8, #7BB1D9, #3794CF, #077BC6, #0668BC) + lilases (#CBBACE, #CB8CC2)
+import { assetUrl } from "@/lib/utils";
 
 export const PALETTE = {
   bluePastel: '#A6CEE8',
@@ -94,7 +95,7 @@ export const CAROUSEL_PHOTOS = [
   '/timeline/nasceu.png',
   '/timeline/novos_amigos.png',
   '/timeline/pessoas.png',
-];
+].map(assetUrl);
 
 export const TOTAL_EGGS = 10;
 

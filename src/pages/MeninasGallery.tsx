@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { assetUrl } from "@/lib/utils";
 
 const PHOTOS = [
   "/photos/meninas/01.jpeg",
@@ -30,7 +31,7 @@ const PHOTOS = [
   "/photos/meninas/27.jpeg",
   "/photos/meninas/28.jpeg",
   "/photos/meninas/29.jpeg",
-];
+].map(assetUrl);
 
 function randomBetween(a, b) {
   return a + Math.random() * (b - a);

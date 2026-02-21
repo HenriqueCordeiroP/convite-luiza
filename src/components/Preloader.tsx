@@ -7,6 +7,7 @@ import { PhotoRain } from "./preloader/PhotoRain";
 import { ClassicTitleBarButton } from "./retro/ClassicTitleBarButton";
 import { THEME } from "./shared/constants";
 import type { RainItem } from "./shared/types";
+import { assetUrl } from "@/lib/utils";
 
 interface Props {
   onComplete: () => void;
@@ -17,7 +18,7 @@ const LOADER = {
   completeDelayMs: 450,
 };
 
-const PHOTO_SOURCES = ["/photos/luiza/01.jpeg", "/photos/luiza/02.jpeg", "/photos/luiza/03.jpeg", "/photos/luiza/04.jpeg", "/photos/luiza/05.jpeg", "/photos/luiza/06.jpeg", "/photos/luiza/07.jpeg", "/photos/luiza/08.jpeg"];
+const PHOTO_SOURCES = ["/photos/luiza/01.jpeg", "/photos/luiza/02.jpeg", "/photos/luiza/03.jpeg", "/photos/luiza/04.jpeg", "/photos/luiza/05.jpeg", "/photos/luiza/06.jpeg", "/photos/luiza/07.jpeg", "/photos/luiza/08.jpeg"].map(assetUrl);
 
 const EASTER_EGG = {
   enabled: true,
@@ -42,7 +43,7 @@ export default function Preloader({ onComplete }: Props) {
   const statusText = useMemo(() => getStatusText(progress), [progress]);
 
   const rainItems = useMemo<RainItem[]>(() => {
-    const safePhotos = PHOTO_SOURCES.length ? PHOTO_SOURCES : ["/favicon.ico"];
+    const safePhotos = PHOTO_SOURCES.length ? PHOTO_SOURCES : [assetUrl("/favicon.ico")];
 
     return Array.from({ length: EASTER_EGG.count }).map((_, i) => {
       const src = safePhotos[i % safePhotos.length];

@@ -1,4 +1,5 @@
 import { CAROUSEL_PHOTOS } from "@/components/shared/constants";
+import { assetUrl } from "@/lib/utils";
 
 /** Imagens do Hero (balões, chapéus, info) */
 const HERO_IMAGES = [
@@ -6,7 +7,7 @@ const HERO_IMAGES = [
   "/assets/chapeu_festa.png",
   "/assets/chapeu_formatura.png",
   "/assets/info_festa.png",
-];
+].map(assetUrl);
 
 /** Galeria Retro (banguela + amigos) */
 const RETRO_GALLERY_IMAGES = [
@@ -27,7 +28,7 @@ const RETRO_GALLERY_IMAGES = [
   "/photos/amigos/sofia.jpeg",
   "/photos/amigos/geraldo.jpeg",
   "/photos/amigos/leo.jpeg",
-];
+].map(assetUrl);
 
 /** Timeline (evitar flash ao scroll) */
 const TIMELINE_IMAGES = [
@@ -41,7 +42,7 @@ const TIMELINE_IMAGES = [
   "/timeline/novos_amigos.png",
   "/timeline/amor.png",
   "/timeline/2026.png",
-];
+].map(assetUrl);
 
 const ALL_IMAGE_URLS = [
   ...new Set([

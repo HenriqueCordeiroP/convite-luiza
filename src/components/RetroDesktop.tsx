@@ -10,50 +10,51 @@ import { RetroMessagesModal } from './retro/RetroMessagesModal';
 import { Taskbar } from './retro/Taskbar';
 import { THEME } from './shared/constants';
 import { getStoredRsvp, saveRsvp, saveDecline } from '@/lib/rsvpStorage';
+import { assetUrl } from '@/lib/utils';
 
 const BANGUELA_PHOTOS: GalleryPhoto[] = [
-  { src: '/photos/banguela/01.png', alt: 'Banguela' },
-  { src: '/photos/banguela/02.png', alt: 'Banguela' },
-  { src: '/photos/banguela/03.png', alt: 'Banguela' },
-  { src: '/photos/banguela/04.png', alt: 'Banguela' },
-  { src: '/photos/banguela/05.png', alt: 'Banguela' },
-  { src: '/photos/banguela/06.png', alt: 'Banguela' },
-  { src: '/photos/banguela/07.png', alt: 'Banguela' },
-  { src: '/photos/banguela/08.png', alt: 'Banguela' },
-  { src: '/photos/banguela/09.png', alt: 'Banguela' },
-  { src: '/photos/banguela/10.png', alt: 'Banguela' },
-  { src: '/photos/banguela/11.png', alt: 'Banguela' },
-  { src: '/photos/banguela/12.png', alt: 'Banguela' },
-  { src: '/photos/banguela/13.png', alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/01.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/02.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/03.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/04.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/05.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/06.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/07.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/08.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/09.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/10.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/11.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/12.png'), alt: 'Banguela' },
+  { src: assetUrl('/photos/banguela/13.png'), alt: 'Banguela' },
 ];
 
 const NAUTICO_PHOTOS: GalleryPhoto[] = [
-  { src: '/photos/lixeira/nautico/01.png', alt: 'Náutico' },
-  { src: '/photos/lixeira/nautico/02.jpg', alt: 'Náutico' },
-  { src: '/photos/lixeira/nautico/03.jpeg', alt: 'Náutico' },
+  { src: assetUrl('/photos/lixeira/nautico/01.png'), alt: 'Náutico' },
+  { src: assetUrl('/photos/lixeira/nautico/02.jpg'), alt: 'Náutico' },
+  { src: assetUrl('/photos/lixeira/nautico/03.jpeg'), alt: 'Náutico' },
 ];
 
 const SPORT_PHOTOS: GalleryPhoto[] = [
-  { src: '/photos/lixeira/sport/01.png', alt: 'Sport' },
-  { src: '/photos/lixeira/sport/02.jpg', alt: 'Sport' },
-  { src: '/photos/lixeira/sport/03.jpg', alt: 'Sport' },
+  { src: assetUrl('/photos/lixeira/sport/01.png'), alt: 'Sport' },
+  { src: assetUrl('/photos/lixeira/sport/02.jpg'), alt: 'Sport' },
+  { src: assetUrl('/photos/lixeira/sport/03.jpg'), alt: 'Sport' },
 ];
 
 
 const SANTA_CRUZ_PHOTOS: GalleryPhoto[] = [
-  { src: '/photos/santa/01.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/02.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/03.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/04.jpeg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/05.jpeg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/06.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/07.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/08.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/09.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/10.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/11.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/12.jpg', alt: 'Santa Cruz' },
-  { src: '/photos/santa/13.jpeg', alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/01.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/02.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/03.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/04.jpeg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/05.jpeg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/06.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/07.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/08.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/09.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/10.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/11.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/12.jpg'), alt: 'Santa Cruz' },
+  { src: assetUrl('/photos/santa/13.jpeg'), alt: 'Santa Cruz' },
 ];
 
 

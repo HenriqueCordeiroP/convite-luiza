@@ -1,67 +1,68 @@
 import { motion } from 'framer-motion';
 import { TimelineItem } from './sections/TimelineItem';
+import { assetUrl } from '@/lib/utils';
 
 const milestones = [
   {
     year: '2004',
     title: 'O começo de tudo',
     description: 'Chegou ao mundo pronta pra conquistar tudo (ou pelo menos tentar)',
-    image: '/timeline/nasceu.png',
+    image: assetUrl('/timeline/nasceu.png'),
   },
   {
     year: '',
     title: 'Começou a tentar andar',
     description: 'Os primeiros passos... e tombos. Muitos tombos.',
-    image: '/timeline/andar.png',
+    image: assetUrl('/timeline/andar.png'),
   },
   {
     year: '',
     title: 'Descobriu que tinha a melhor mãe do mundo',
     description: 'Que faz de tudo por ela desde o início',
-    image: '/timeline/mae.png',
+    image: assetUrl('/timeline/mae.png'),
   },
   {
     year: '',
     title: 'Desde sempre amando os animais',
     description: 'O amor por bichinhos veio antes de aprender a falar direito',
-    image: '/timeline/animais.png',
+    image: assetUrl('/timeline/animais.png'),
   },
   {
     year: '',
     title: 'Tentou a carreira de modelo juvenil que não decolou',
     description: 'Pelo menos as fotos ficaram fofas pra memória',
-    image: '/timeline/modelo.png',
+    image: assetUrl('/timeline/modelo.png'),
   },
   {
     year: '',
     title: 'Aproveitou e amou muito a vida até agora',
     description: 'Com pessoas incríveis, que trouxeram muito amor em cada momento.',
-    image: '/timeline/pessoas.png',
+    image: assetUrl('/timeline/pessoas.png'),
   },
   {
     year: '',
     title: 'Decidiu o que queria da vida',
     description: 'e não se arrependeu nem um pouco dessa escolha',
-    image: '/timeline/curso.png',
+    image: assetUrl('/timeline/curso.png'),
   },
   {
     year: '',
     title: 'Conheceu pessoas incríveis',
     description: 'que viraram rotina e vão tornar a vida mais especial sempre',
-    image: '/timeline/novos_amigos.png',
+    image: assetUrl('/timeline/novos_amigos.png'),
   },
   {
     year: '',
     title: 'Conheceu o amor',
     description: 'que transformou os dias comuns nos mais especiais',
-    image: '/timeline/amor.png',
+    image: assetUrl('/timeline/amor.png'),
   },
 
   {
     year: '2026',
     title: 'E finalmente tá se formando em Ciência da Computação e completando 22 anos!',
     description: 'Agora é continuar crescendo e amando a vida cada vez mais!',
-    image: '/timeline/2026.png',
+    image: assetUrl('/timeline/2026.png'),
   },
 ];
 

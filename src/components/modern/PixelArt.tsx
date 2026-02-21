@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
+import { assetUrl } from "@/lib/utils";
 
-const BALLOON_SRC = "/assets/22_balloon.png";
+const BALLOON_SRC = assetUrl("/assets/22_balloon.png");
 
 // 30 x 29
 const GRID_COLS = 30;
